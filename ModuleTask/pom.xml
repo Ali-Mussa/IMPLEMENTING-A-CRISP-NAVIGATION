@@ -13,12 +13,25 @@
     <artifactId>ModuleTask</artifactId>
 
     <dependencies>
-        <!-- JUnit 5 for Testing -->
+        <!-- jCalendar Dependency -->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.9.2</version>
-            <scope>test</scope>
+            <groupId>com.toedter</groupId>
+            <artifactId>jcalendar</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <!-- JTattoo Dependency -->
+        <dependency>
+            <groupId>com.jtattoo</groupId>
+            <artifactId>JTattoo</artifactId>
+            <version>1.6.13</version>
+        </dependency>
+
+        <!-- FlatLaf (Flat Look and Feel) Dependency -->
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>3.2</version>
         </dependency>
     </dependencies>
 
