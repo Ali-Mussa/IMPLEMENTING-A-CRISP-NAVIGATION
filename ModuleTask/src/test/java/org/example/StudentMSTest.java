@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.*;
 
   class StudentMSTest {
@@ -103,15 +102,12 @@ import static org.junit.jupiter.api.Assertions.*;
           assertThrowsExactly(NullPointerException.class, studentMS::updateStudentList, "Expected NullPointerException when studentRecords is null");
       }
 
-      @Test
+       @Test
       void ToggleDarkMode() {
           StudentMS studentMS = new StudentMS();
-          assertDoesNotThrow(() -> studentMS.toggleDarkMode());
-
-          assertDoesNotThrow(() -> {
-              studentMS.toggleDarkMode();
-              assertNotNull(studentMS.frame.getContentPane());
-          });
+          studentMS.toggleDarkMode();
+          assertDoesNotThrow(studentMS::toggleDarkMode);
+          assertNotNull(studentMS.frame.getContentPane());
       }
 
 
